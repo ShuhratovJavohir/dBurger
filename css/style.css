@@ -1,0 +1,461 @@
+:root{
+    --white: #fff;
+    --purple: #3E284F;
+    --name-color: #404040;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Open Sans', 'Saira Stencil One',  sans-serif;
+    font-size: 16px;
+}
+
+.wrapper{
+    max-width: 1326px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* header =========
+=================== */
+
+.header{
+    background-color: var(--purple);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 0;
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo a span{
+    color: var(--white);
+    font-family: 'Saira Stencil One', cursive;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.cart{
+    position: relative;
+}
+
+.cart-empty{
+    padding-top: 16px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: var(--name-color);
+}
+
+.cart button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cart-current-btn{
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    border: 1px solid var(--purple); 
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--purple);
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-burger{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--purple);
+    color: var(--white);
+    border: 1px solid var(--white);
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.cart-list{
+    width: 357px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1000;
+    right: 1px;
+    top: 55px;
+    background-color: var(--white);
+}
+
+.none{
+    display: none;
+}
+
+.cart-list-close-btn{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+}
+
+.cart-list h2{
+    color: var(--white);
+    font-size: 16px;
+}
+
+.total-price{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.cart-list-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #775194;
+    padding: 16px 13px 21px 14px;
+    border-radius: 10px  10px 0 0;
+}
+
+.add-burger-items img{
+    width: 70px;
+    height: 54px;
+}
+
+.add-burger-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0 16px;
+}
+
+
+
+.cart-burger{
+    display: flex;
+    align-items: center;
+}
+
+.cart-burger img{
+    margin-right: 10px;
+}
+
+.burger-name{
+    font-family: 'Saira Stencil One', cursive;
+    font-weight: 400;
+    color: var(--name-color);
+}
+
+.burger-price{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.more-add{
+    display: flex;
+    border: 1px solid #BBB;
+    background-color: #BBB;
+    border-radius: 10px;
+}
+
+.more-add button{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.more-add p{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background-color: #EEE;
+}
+
+.add-burger-bottom{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #00A441;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
+
+
+/* main =========
+================= */
+
+/* section slid */
+.slid{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* section burger cards */
+.burger-cards{
+    margin-top: 74px;
+}
+
+
+.burger-card-ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.card-item{
+    background: #F4F4F4;
+    box-shadow: 0px 20px 20px -15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 306px;
+    padding-top: 88px;
+    text-align: center;
+    position: relative;
+    /* margin-right: 24px; */
+}
+
+/* .card-item:last-child{
+    margin-right: 0;
+} */
+
+/* .order::after{
+    content: '1';
+    font-size: 12px;
+    position: absolute;
+    padding: 7px 11px;
+    background-color: var(--purple);
+    color: var(--white);
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    top: -20px;
+    right: -20px;
+} */
+
+.card-item h1{
+    font-family: 'Saira Stencil One';
+    font-weight: 400;
+}
+
+.card-burger{
+    position: absolute;
+    top: -55px;
+    left: 74px;
+}
+
+.big-burger{
+    left: 60px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.buttons button{
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.buttons button::after{
+    content: '';
+    display: block;
+    background-image: url(../img/addCart.svg);
+    position: relative;
+    width: 20px;
+    height: 21px;
+
+}
+
+
+.buttons p{
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (max-width: 1320px) {
+    .burger-cards{
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    .card-item{
+        margin: 0 20px;
+        margin-top: 100px;
+    }
+    .card-item:last-child{
+        margin-right: 0;
+    }
+    
+    .burger-card-ul{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+@media (max-width: 1000px){
+    .card-item{
+        margin: 0 30px;
+        margin-top: 100px;
+    }
+    .card-item:last-child{
+        margin-right: 0;
+    }
+    
+    .burger-card-ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+@media (max-width: 1100px){
+    .slid img{
+        width: 1000px;
+    }
+}
+
+@media(max-width: 1050px){
+    .slid img{
+        width: 900px;
+    }
+}
+
+@media(max-width: 950px){
+    .slid img{
+        width: 800px;
+    }
+}
+
+@media(max-width: 815px){
+    .slid img{
+        width: 700px;
+    }
+}
+
+@media(max-width: 740px){
+    
+    .card-item{
+        margin: 0 10px;
+        margin-top: 100px;
+    }
+    
+    .slid img{
+        width: 600px;
+    }
+    
+    .burger-name{
+        font-size: 18px;
+    }
+    
+    .card-burger{
+        width: 130px;
+    }
+    
+    .card-item {
+        width: 250px;
+        padding-top: 50px;
+    }
+    
+    .buttons p{
+        font-size: 14px;
+    }
+    .buttons button{
+        padding: 8px;
+    }
+}
+
+@media(max-width: 610px){
+    .card-item{
+        margin: 0 5px;
+        margin-top: 100px;
+    }
+    
+    .slid img{
+        width: 500px;
+    }
+    
+    .card-burger{
+        width: 100px;
+        top: -35px;
+    }
+    
+    .card-item {
+        width: 230px;
+        padding-top: 45px;
+    }
+}
+
+@media(max-width: 510px){
+    .slid img{
+        width: 350px;
+    }
+    
+    .burger-card-ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dBurger</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="logo">
+                <a href="/">
+                    <img src="./img/logo.svg" alt="logo">
+                    <span>dBurger</span>
+                </a>
+            </div>
+            <div class="cart">
+                <button class="cart-btn" id="cart"><img src="./img/cart.svg" alt="cart"></button>
+                <p class="cart-current-btn none">0</p>
+                <div class="cart-list none">
+                    <div class="cart-list-top">
+                        <h2>Корзина</h2>
+                        <button class="cart-list-close-btn"><img src="./img/close.svg" alt="close"></button>
+                    </div>
+                    <h1 class="cart-empty" data-cart-empty>Корзина пуста</h1>
+                    <div class="add-burger">
+                        <!-- ============================ -->
+                    </div>
+                    <div class="add-burger-bottom">
+                        <h2>Заказать</h2>
+                        <div class="total-price">
+                            <h2 id="cart-price">0</h2>
+                            <p>сум</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="wrapper">
+        <section class="slid">
+            <img src="./img/slid.jpg" alt="BUUUUUURGER">
+        </section>
+        <section class="burger-cards">
+            <ul class="burger-card-ul">
+                <li class="card-item order" id="0">
+                    <img class="card-burger" src="./img/burger-1.png" alt="Crazy">
+                    <h1 class="burger-name">Crazy</h1>
+                    <div class="buttons">
+                        <p class="burger-price">32000 сум</p>
+                        <button class="add-cart" data-cart="add"></button>
+                    </div>
+                    <p class="counter-burger none">0</p>
+                </li>
+                <li class="card-item order" id="1">
+                    <img class="card-burger" src="./img/burger-2.png" alt="Crazy">
+                    <h1 class="burger-name">Light</h1>
+                    <div class="buttons">
+                        <p class="burger-price">26000 сум</p>
+                        <button class="add-cart" data-cart="add"></button>
+                    </div>
+                    <p class="counter-burger none">0</p>
+                </li>
+                <li class="card-item order" id="2">
+                    <img class="card-burger" src="./img/burger-3.png" alt="Crazy">
+                    <h1 class="burger-name">CheeseBurger</h1>
+                    <div class="buttons">
+                        <p class="burger-price">29000 сум</p>
+                        <button class="add-cart" data-cart="add"></button>
+                    </div>
+                    <p class="counter-burger none">0</p>
+                </li>
+                <li class="card-item order" id="3">
+                    <img class="card-burger" src="./img/burger-4.png" alt="Crazy">
+                    <h1 class="burger-name">dBurger</h1>
+                    <div class="buttons">
+                        <p class="burger-price">24000 сум</p>
+                        <button class="add-cart" data-cart="add"></button>
+                    </div>
+                    <p class="counter-burger none">0</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>
+<script src="./js/main.js"></script>
+</body>
+</html>
